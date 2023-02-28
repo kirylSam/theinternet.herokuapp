@@ -1,0 +1,32 @@
+<suite name="theinternet_automation" verbose="1" parallel = "tests" thread-count = "2">
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <!--<class name="theinternet_automation.homePageTest.HomePageTest"/>
+            <class name="theinternet_automation.basicAuthTest.BasicAuthTest"/>
+            <class name="theinternet_automation.checkboxesPageTest.CheckboxesPageTest"/>
+            <class name="theinternet_automation.contextMenuPageTest.ContextMenuPageTest"/>
+            <class name="theinternet_automation.dropdownPageTest.DropdownPageTest"/>
+            <class name="theinternet_automation.entryAdPageTest.EntryAdPageTest"/>-->
+           <!-- <class name="theinternet_automation.exitAdPageTest.ExitAdPageTest"/>-->
+          <!--  <class name="theinternet_automation.fileUploadPageTest.FileUploadPageTest"/>-->
+           <!-- <class name="theinternet_automation.floatingMenuPageTest.FloatingMenuPageTest"/>-->
+            <class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+           <!-- <class name="theinternet_automation.homePageTest.HomePageTest"/>
+            <class name="theinternet_automation.basicAuthTest.BasicAuthTest"/>
+            <class name="theinternet_automation.checkboxesPageTest.CheckboxesPageTest"/>
+            <class name="theinternet_automation.contextMenuPageTest.ContextMenuPageTest"/>
+            <class name="theinternet_automation.dropdownPageTest.DropdownPageTest"/>
+            <class name="theinternet_automation.entryAdPageTest.EntryAdPageTest"/>-->
+          <!--  <class name="theinternet_automation.exitAdPageTest.ExitAdPageTest"/>-->
+           <!-- <class name="theinternet_automation.fileUploadPageTest.FileUploadPageTest"/>-->
+           <!-- <class name="theinternet_automation.floatingMenuPageTest.FloatingMenuPageTest"/>-->
+            <class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>
+        </classes>
+    </test>
+</suite>
