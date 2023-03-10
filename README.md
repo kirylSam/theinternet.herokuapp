@@ -13,3 +13,4 @@ Running in both Chrome and Firefox.
 - [File Upload](https://the-internet.herokuapp.com/upload)
 - [Floating Menu](https://the-internet.herokuapp.com/floating_menu)
 - [Form Authentication](https://the-internet.herokuapp.com/login)
+- [Geolocation] (https://the-internet.herokuapp.com/geolocation)
