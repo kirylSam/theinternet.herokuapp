@@ -3,7 +3,7 @@
 Running in both Chrome and Firefox.
 
 ---
-## Tested Examples (10.03.23):
+## Tested Examples (12.03.23):
 - [Basic Auth](https://the-internet.herokuapp.com/basic_auth)(user and pass: admin)
 - [Checkboxes](https://the-internet.herokuapp.com/checkboxes)
 - [Context Menu](https://the-internet.herokuapp.com/context_menu)
@@ -15,3 +15,4 @@ Running in both Chrome and Firefox.
 - [Form Authentication](https://the-internet.herokuapp.com/login)
 - [Geolocation](https://the-internet.herokuapp.com/geolocation)
 - [Horizontal Slider](https://the-internet.herokuapp.com/horizontal_slider)
+- [Hovers](https://the-internet.herokuapp.com/hovers)
