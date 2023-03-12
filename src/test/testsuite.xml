@@ -12,7 +12,8 @@
           <!--  <class name="theinternet_automation.fileUploadPageTest.FileUploadPageTest"/>-->
            <!-- <class name="theinternet_automation.floatingMenuPageTest.FloatingMenuPageTest"/>-->
            <!-- <class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>-->
-            <class name="theinternet_automation.geolocationPageTest.GeolocationPageTest"/>
+            <!--<class name="theinternet_automation.geolocationPageTest.GeolocationPageTest"/>-->
+            <class name="theinternet_automation.horizontalSliderTest.HorizontalSliderPageTest"/>
         </classes>
     </test>
     <test name="FirefoxTest">
@@ -28,6 +29,7 @@
            <!-- <class name="theinternet_automation.fileUploadPageTest.FileUploadPageTest"/>-->
            <!-- <class name="theinternet_automation.floatingMenuPageTest.FloatingMenuPageTest"/>-->
             <!--<class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>-->
+            <class name="theinternet_automation.horizontalSliderTest.HorizontalSliderPageTest"/>
         </classes>
     </test>
 </suite>
