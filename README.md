@@ -14,3 +14,4 @@ Running in both Chrome and Firefox.
 - [Floating Menu](https://the-internet.herokuapp.com/floating_menu)
 - [Form Authentication](https://the-internet.herokuapp.com/login)
 - [Geolocation](https://the-internet.herokuapp.com/geolocation)
+- [Horizontal Slider](https://the-internet.herokuapp.com/horizontal_slider)
