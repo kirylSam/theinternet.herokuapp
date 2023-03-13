@@ -30,7 +30,7 @@ public class HoversPageAct extends PageObject {
 
 
     public HoversPageAct checkIfNameOneIsDisplayed() {
-        //There's a change that some waits may be necessary here
+        //There's a chance that some waits may be necessary here
         assertTrue(hoversPageVerify.isNameOneDisplayed());
         return this;
     }
