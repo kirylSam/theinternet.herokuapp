@@ -3,6 +3,7 @@ package theinternet_automation.hovers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import theinternet_automation.PageObject;
+import theinternet_automation.utilities.WaitUtility;
 
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -30,7 +31,7 @@ public class HoversPageAct extends PageObject {
 
 
     public HoversPageAct checkIfNameOneIsDisplayed() {
-        //There's a chance that some waits may be necessary here
+        WaitUtility.WaitForVisibilityOf(hoversPageVerify.hoversPageWebElements.nameOne());
         assertTrue(hoversPageVerify.isNameOneDisplayed());
         return this;
     }
@@ -43,6 +44,7 @@ public class HoversPageAct extends PageObject {
     }
 
     public HoversPageAct checkIfNameTwoIsDisplayed() {
+        WaitUtility.WaitForVisibilityOf(hoversPageVerify.hoversPageWebElements.nameTwo());
         assertTrue(hoversPageVerify.isNameTwoDisplayed());
         return this;
     }

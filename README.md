@@ -4,7 +4,7 @@ Running in both Chrome and Firefox.
 
 ---
 ## Tested Examples (13.03.23):
-- [Basic Auth](https://the-internet.herokuapp.com/basic_auth)(user and pass: admin)
+- [Basic Auth](https://the-internet.herokuapp.com/basic_auth)
 - [Checkboxes](https://the-internet.herokuapp.com/checkboxes)
 - [Context Menu](https://the-internet.herokuapp.com/context_menu)
 - [Dropdown](https://the-internet.herokuapp.com/dropdown)
@@ -17,3 +17,4 @@ Running in both Chrome and Firefox.
 - [Horizontal Slider](https://the-internet.herokuapp.com/horizontal_slider)
 - [Hovers](https://the-internet.herokuapp.com/hovers)
 - [Inputs](https://the-internet.herokuapp.com/inputs) (only Chrome atm)
+- [JQuery UI](https://the-internet.herokuapp.com/jqueryui/menu)

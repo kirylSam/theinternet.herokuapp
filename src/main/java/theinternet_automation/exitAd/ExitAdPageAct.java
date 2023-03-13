@@ -49,6 +49,7 @@ public class ExitAdPageAct extends PageObject {
     }
 
     public ExitAdPageAct closeExitAdModal() {
+        WaitUtility.WaitForVisibilityOf(exitAdPageWebElements.exitAdModalCloseButton());
         exitAdPageWebElements.exitAdModalCloseButton().click();
         return this;
     }

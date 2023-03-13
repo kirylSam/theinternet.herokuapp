@@ -18,5 +18,4 @@ public class ExitAdPageWebElements extends PageObject {
 
     @FindBy(css = ".modal-footer p")
     private WebElement exitAdModalCloseButton;
-    
 }
