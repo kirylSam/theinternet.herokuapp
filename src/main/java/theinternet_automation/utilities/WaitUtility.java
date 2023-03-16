@@ -1,5 +1,7 @@
 package theinternet_automation.utilities;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import theinternet_automation.PageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,5 +29,10 @@ public class WaitUtility extends PageObject {
 
     public static WebElement WaitForElementToBeClickable(WebElement element) {
         return wait.until(elementToBeClickable(element));
+    }
+
+    public static Alert WaitForAlertToBeDisplayed() {
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        return alert;
     }
 }

@@ -3,6 +3,7 @@ package theinternet_automation.initialization;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ThreadGuard;
 
 public final class DriverFactory {
 
@@ -11,6 +12,7 @@ public final class DriverFactory {
     }
 
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
     public static WebDriver getDriver() {
         return driver.get();
     }
@@ -26,9 +28,11 @@ public final class DriverFactory {
     private static WebDriver createBrowserInstance(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":
-                return new ChromeDriver();
+                return ThreadGuard.protect(new ChromeDriver());
+                //return new ChromeDriver();
             case "firefox":
-                return new FirefoxDriver();
+                return ThreadGuard.protect(new FirefoxDriver());
+                //return new FirefoxDriver();
             default:
                 throw new IllegalArgumentException("Browser [" + browser + "] is NOT supported");
         }
