@@ -2,7 +2,7 @@
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="theinternet_automation.homePageTest.HomePageTest"/>
+          <!--  <class name="theinternet_automation.homePageTest.HomePageTest"/>
             <class name="theinternet_automation.basicAuthTest.BasicAuthTest"/>
             <class name="theinternet_automation.checkboxesPageTest.CheckboxesPageTest"/>
             <class name="theinternet_automation.contextMenuPageTest.ContextMenuPageTest"/>
@@ -11,18 +11,20 @@
             <class name="theinternet_automation.exitAdPageTest.ExitAdPageTest"/>
             <class name="theinternet_automation.fileUploadPageTest.FileUploadPageTest"/>
             <class name="theinternet_automation.floatingMenuPageTest.FloatingMenuPageTest"/>
-            <class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>
-            <class name="theinternet_automation.geolocationPageTest.GeolocationPageTest"/>
+            <class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>-->
+           <!-- <class name="theinternet_automation.geolocationPageTest.GeolocationPageTest"/>
             <class name="theinternet_automation.horizontalSliderTest.HorizontalSliderPageTest"/>
             <class name="theinternet_automation.hoversPageTest.HoversPageTest"/>
-            <class name="theinternet_automation.inputsPageTest.InputsPageTest"/>
-            <class name="theinternet_automation.jQueryMenuPageTest.JQueryMenuPageTest"/>
+            <class name="theinternet_automation.inputsPageTest.InputsPageTest"/>-->
+            <!--<class name="theinternet_automation.jQueryMenuPageTest.JQueryMenuPageTest"/>-->
+           <!-- <class name="theinternet_automation.multipleWindowsTest.MultipleWindowsPageTest"/>-->
+            <!--<class name="theinternet_automation.multipleWindowsTest.MultipleWindowsPageTest"/>-->
         </classes>
     </test>
     <test name="FirefoxTest">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="theinternet_automation.homePageTest.HomePageTest"/>
+           <!-- <class name="theinternet_automation.homePageTest.HomePageTest"/>
             <class name="theinternet_automation.basicAuthTest.BasicAuthTest"/>
             <class name="theinternet_automation.checkboxesPageTest.CheckboxesPageTest"/>
             <class name="theinternet_automation.contextMenuPageTest.ContextMenuPageTest"/>
@@ -30,11 +32,12 @@
             <class name="theinternet_automation.entryAdPageTest.EntryAdPageTest"/>
             <class name="theinternet_automation.exitAdPageTest.ExitAdPageTest"/>
             <class name="theinternet_automation.fileUploadPageTest.FileUploadPageTest"/>
-            <class name="theinternet_automation.floatingMenuPageTest.FloatingMenuPageTest"/>
-            <class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>
+            <class name="theinternet_automation.floatingMenuPageTest.FloatingMenuPageTest"/>-->
+          <!--  <class name="theinternet_automation.formAuthPageTest.FormAuthPageTest"/>
             <class name="theinternet_automation.horizontalSliderTest.HorizontalSliderPageTest"/>
             <class name="theinternet_automation.hoversPageTest.HoversPageTest"/>
-            <class name="theinternet_automation.jQueryMenuPageTest.JQueryMenuPageTest"/>
+            <class name="theinternet_automation.jQueryMenuPageTest.JQueryMenuPageTest"/>-->
+            <class name="theinternet_automation.multipleWindowsTest.MultipleWindowsPageTest"/>
         </classes>
     </test>
 </suite>

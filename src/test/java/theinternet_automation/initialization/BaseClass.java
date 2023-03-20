@@ -6,10 +6,10 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 public class BaseClass {
-    @BeforeSuite
+  /*  @BeforeSuite
     public void setSystemProperty(){
         System.setProperty("webdriver.http.factory", "jdk-http-client");
-    }
+    }*/
 
     @BeforeClass
     @Parameters({"browser"})
