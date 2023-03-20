@@ -3,7 +3,7 @@
 Running in both Chrome and Firefox.
 
 ---
-## Tested Examples (13.03.23):
+## Tested Examples:
 - [Basic Auth](https://the-internet.herokuapp.com/basic_auth)
 - [Checkboxes](https://the-internet.herokuapp.com/checkboxes)
 - [Context Menu](https://the-internet.herokuapp.com/context_menu)
