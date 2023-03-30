@@ -6,7 +6,7 @@ import theinternet_automation.PageObject;
 public class FileUploadPageVerify extends PageObject {
 
     String fileName = "img.jpg";
-    FileUploadPageWebElements fileUploadPageWebElements = new FileUploadPageWebElements(driver);
+    FileUploadPageWebElements fileUploadPageWebElements = new FileUploadPageWebElements(driverThread.get());
 
     public FileUploadPageVerify(WebDriver driver) { super(driver);}
 

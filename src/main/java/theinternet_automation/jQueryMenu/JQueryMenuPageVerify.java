@@ -5,7 +5,7 @@ import theinternet_automation.PageObject;
 
 public class JQueryMenuPageVerify extends PageObject {
 
-    JQueryMenuPageWebElements jQueryMenuPageWebElements = new JQueryMenuPageWebElements(driver);
+    JQueryMenuPageWebElements jQueryMenuPageWebElements = new JQueryMenuPageWebElements(driverThread.get());
 
     public JQueryMenuPageVerify(WebDriver driver) { super(driver);}
 

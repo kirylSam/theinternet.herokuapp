@@ -5,7 +5,7 @@ import theinternet_automation.PageObject;
 
 public class HorizontalSliderPageVerify extends PageObject {
 
-    HorizontalSliderPageWebElements horizontalSliderPageWebElements = new HorizontalSliderPageWebElements(driver);
+    HorizontalSliderPageWebElements horizontalSliderPageWebElements = new HorizontalSliderPageWebElements(driverThread.get());
 
     public HorizontalSliderPageVerify(WebDriver driver) { super(driver);}
 

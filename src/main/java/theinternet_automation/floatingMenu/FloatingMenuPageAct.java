@@ -9,18 +9,18 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class FloatingMenuPageAct extends PageObject {
 
-    FloatingMenuPageWebElements floatingMenuPageWebElements = new FloatingMenuPageWebElements(driver);
-    FloatingMenuPageVerify floatingMenuPageVerify = new FloatingMenuPageVerify(driver);
+    FloatingMenuPageWebElements floatingMenuPageWebElements = new FloatingMenuPageWebElements(driverThread.get());
+    FloatingMenuPageVerify floatingMenuPageVerify = new FloatingMenuPageVerify(driverThread.get());
 
     public FloatingMenuPageAct(WebDriver driver) { super(driver);}
 
     public FloatingMenuPageAct openFloatingMenuPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/floating_menu");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/floating_menu");
         return this;
     }
 
     public FloatingMenuPageAct scrollDownToPageFooter() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) driverThread.get();
         js.executeScript("arguments[0].scrollIntoView(true);", floatingMenuPageWebElements.pageFooter());
         return this;
     }

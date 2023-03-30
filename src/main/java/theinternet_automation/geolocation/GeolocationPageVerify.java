@@ -5,7 +5,7 @@ import theinternet_automation.PageObject;
 
 public class GeolocationPageVerify extends PageObject {
 
-    GeolocationPageWebElements geolocationPageWebElements = new GeolocationPageWebElements(driver);
+    GeolocationPageWebElements geolocationPageWebElements = new GeolocationPageWebElements(driverThread.get());
 
     public GeolocationPageVerify(WebDriver driver) { super(driver);}
 

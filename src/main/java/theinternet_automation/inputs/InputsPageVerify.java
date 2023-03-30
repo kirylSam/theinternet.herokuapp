@@ -5,7 +5,7 @@ import theinternet_automation.PageObject;
 
 public class InputsPageVerify extends PageObject {
 
-    InputsPageWebElements inputsPageWebElements = new InputsPageWebElements(driver);
+    InputsPageWebElements inputsPageWebElements = new InputsPageWebElements(driverThread.get());
 
     public InputsPageVerify(WebDriver driver) { super(driver);}
 

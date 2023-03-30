@@ -1,6 +1,5 @@
 package theinternet_automation.geolocation;
 
-import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import theinternet_automation.PageObject;
 import theinternet_automation.utilities.WaitUtility;
@@ -9,8 +8,8 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class GeolocationPageAct extends PageObject {
 
-    GeolocationPageVerify geolocationPageVerify = new GeolocationPageVerify(driver);
-    GeolocationPageWebElements geolocationPageWebElements = new GeolocationPageWebElements(driver);
+    GeolocationPageVerify geolocationPageVerify = new GeolocationPageVerify(driverThread.get());
+    GeolocationPageWebElements geolocationPageWebElements = new GeolocationPageWebElements(driverThread.get());
 
     //Constructor
     public GeolocationPageAct(WebDriver driver) {
@@ -18,7 +17,7 @@ public class GeolocationPageAct extends PageObject {
     }
 
     public GeolocationPageAct openGeolocationPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/geolocation");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/geolocation");
         return this;
     }
 

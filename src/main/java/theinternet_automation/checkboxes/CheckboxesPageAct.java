@@ -9,13 +9,13 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class CheckboxesPageAct extends PageObject {
 
-    private CheckboxesPageVerify checkboxesPageVerify = new CheckboxesPageVerify(driver);
-    private CheckboxesPageWebElements checkboxesPageWebElements = new CheckboxesPageWebElements(driver);
+    private CheckboxesPageVerify checkboxesPageVerify = new CheckboxesPageVerify(driverThread.get());
+    private CheckboxesPageWebElements checkboxesPageWebElements = new CheckboxesPageWebElements(driverThread.get());
 
     public CheckboxesPageAct(WebDriver driver) {super(driver);}
 
     public CheckboxesPageAct openChexboxesPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/checkboxes");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/checkboxes");
         return this;
     }
 

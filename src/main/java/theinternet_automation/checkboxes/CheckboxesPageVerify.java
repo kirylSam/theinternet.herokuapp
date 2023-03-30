@@ -6,7 +6,7 @@ import theinternet_automation.PageObject;
 
 public class CheckboxesPageVerify extends PageObject {
 
-    private CheckboxesPageWebElements checkboxesPageWebElements = new CheckboxesPageWebElements(driver);
+    private CheckboxesPageWebElements checkboxesPageWebElements = new CheckboxesPageWebElements(driverThread.get());
 
     public CheckboxesPageVerify(WebDriver driver) {super(driver);}
 

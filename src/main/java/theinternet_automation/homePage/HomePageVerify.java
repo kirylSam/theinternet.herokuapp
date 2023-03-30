@@ -6,7 +6,7 @@ import theinternet_automation.PageObject;
 public class HomePageVerify extends PageObject{
     public HomePageVerify(WebDriver driver) { super(driver);}
 
-    private final HomePageWebElements homePageWebElements = new HomePageWebElements(driver);
+    private final HomePageWebElements homePageWebElements = new HomePageWebElements(driverThread.get());
 
     boolean isHomePageOpened() {
         String pageHeading = "";

@@ -5,7 +5,7 @@ import theinternet_automation.PageObject;
 
 public class HoversPageVerify extends PageObject {
 
-    HoversPageWebElements hoversPageWebElements = new HoversPageWebElements(driver);
+    HoversPageWebElements hoversPageWebElements = new HoversPageWebElements(driverThread.get());
 
     public HoversPageVerify(WebDriver driver) { super(driver);}
 

@@ -9,8 +9,8 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class HoversPageAct extends PageObject {
 
-    HoversPageVerify hoversPageVerify = new HoversPageVerify(driver);
-    HoversPageWebElements hoversPageWebElements = new HoversPageWebElements(driver);
+    HoversPageVerify hoversPageVerify = new HoversPageVerify(driverThread.get());
+    HoversPageWebElements hoversPageWebElements = new HoversPageWebElements(driverThread.get());
 
     //Constructor
     public HoversPageAct(WebDriver driver) {
@@ -18,12 +18,12 @@ public class HoversPageAct extends PageObject {
     }
 
     public HoversPageAct openHoversPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/hovers");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/hovers");
         return this;
     }
 
     public HoversPageAct hoverOverPictureOne() {
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(driverThread.get());
         actions.moveToElement(hoversPageWebElements.imageOne());
         actions.perform();
         return this;
@@ -37,7 +37,7 @@ public class HoversPageAct extends PageObject {
     }
 
     public HoversPageAct hoverOverPictureTwo() {
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(driverThread.get());
         actions.moveToElement(hoversPageWebElements.imageTwo());
         actions.perform();
         return this;

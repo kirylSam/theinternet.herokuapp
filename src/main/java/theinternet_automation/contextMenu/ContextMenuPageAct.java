@@ -9,13 +9,13 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class ContextMenuPageAct extends PageObject {
 
-    ContextMenuPageWebElements contextMenuPageWebElements = new ContextMenuPageWebElements(driver);
-    ContextMenuPageVerify contextMenuPageVerify = new ContextMenuPageVerify(driver);
+    ContextMenuPageWebElements contextMenuPageWebElements = new ContextMenuPageWebElements(driverThread.get());
+    ContextMenuPageVerify contextMenuPageVerify = new ContextMenuPageVerify(driverThread.get());
 
     public ContextMenuPageAct (WebDriver driver) { super(driver);}
 
     public ContextMenuPageAct openContextMenuPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/context_menu");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/context_menu");
         return this;
     }
 
@@ -23,7 +23,7 @@ public class ContextMenuPageAct extends PageObject {
         WaitUtility.WaitForVisibilityOf(contextMenuPageWebElements.contextMenuField());
 
         //right-clicking using Actions class
-        Actions action = new Actions(driver);
+        Actions action = new Actions(driverThread.get());
         action.contextClick(contextMenuPageWebElements.contextMenuField()).perform();
         return this;
     }

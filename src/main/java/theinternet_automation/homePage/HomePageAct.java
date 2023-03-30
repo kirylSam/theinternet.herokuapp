@@ -8,7 +8,7 @@ import theinternet_automation.PageObject;
 import static org.testng.Assert.assertTrue;
 
 public class HomePageAct extends PageObject {
-    private final HomePageVerify homePageVerify = new HomePageVerify(driver);
+    private final HomePageVerify homePageVerify = new HomePageVerify(driverThread.get());
 
     //Constructor
     public HomePageAct(WebDriver driver) {
@@ -16,7 +16,7 @@ public class HomePageAct extends PageObject {
     }
 
     public HomePageAct openHomePage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/");
         return this;
     }
 
@@ -26,7 +26,7 @@ public class HomePageAct extends PageObject {
     }
 
     void scrollToAndClickUsingJS(WebElement element) {
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        JavascriptExecutor executor = (JavascriptExecutor) driverThread.get();
         executor.executeScript("arguments[0].scrollIntoView(true);", element);
         executor.executeScript("arguments[0].click();", element);
     }

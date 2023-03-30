@@ -11,6 +11,6 @@ public class BasicAuthTest extends BaseClass {
         BasicAuthPageAct basicAuthPageAct = new BasicAuthPageAct(DriverFactory.getDriver());
         basicAuthPageAct
                 .passLoginAndPasswordInURLandOpenBasicAuth()
-                .checkIfBasicAuthIsSuccessfull();
+                .checkIfBasicAuthIsSuccessful();
     }
 }

@@ -8,13 +8,13 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class FormAuthPageAct extends PageObject {
 
-    FormAuthPageWebElements formAuthPageWebElements = new FormAuthPageWebElements(driver);
-    FormAuthPageVerify formAuthPageVerify = new FormAuthPageVerify(driver);
+    FormAuthPageWebElements formAuthPageWebElements = new FormAuthPageWebElements(driverThread.get());
+    FormAuthPageVerify formAuthPageVerify = new FormAuthPageVerify(driverThread.get());
 
     public FormAuthPageAct(WebDriver driver) { super(driver);}
 
     public FormAuthPageAct openFormAuthPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/login");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/login");
         return this;
     }
 

@@ -8,7 +8,7 @@ import theinternet_automation.PageObject;
 import java.util.List;
 
 public class DropdownPageVerify extends PageObject {
-    DropdownPageWebElements dropdownPageWebElements = new DropdownPageWebElements(driver);
+    DropdownPageWebElements dropdownPageWebElements = new DropdownPageWebElements(driverThread.get());
 
     public DropdownPageVerify(WebDriver driver) { super(driver);}
 

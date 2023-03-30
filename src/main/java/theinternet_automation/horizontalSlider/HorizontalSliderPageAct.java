@@ -1,21 +1,16 @@
 package theinternet_automation.horizontalSlider;
 
-import lombok.SneakyThrows;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import theinternet_automation.PageObject;
-import theinternet_automation.geolocation.GeolocationPageVerify;
-
-import javax.swing.*;
-import javax.swing.plaf.TableHeaderUI;
 
 import static org.testng.AssertJUnit.assertTrue;
 
 public class HorizontalSliderPageAct extends PageObject {
 
-    HorizontalSliderPageVerify horizontalSliderPageVerify = new HorizontalSliderPageVerify(driver);
-    HorizontalSliderPageWebElements horizontalSliderPageWebElements = new HorizontalSliderPageWebElements(driver);
+    HorizontalSliderPageVerify horizontalSliderPageVerify = new HorizontalSliderPageVerify(driverThread.get());
+    HorizontalSliderPageWebElements horizontalSliderPageWebElements = new HorizontalSliderPageWebElements(driverThread.get());
 
     //Constructor
     public HorizontalSliderPageAct(WebDriver driver) {
@@ -23,7 +18,7 @@ public class HorizontalSliderPageAct extends PageObject {
     }
 
     public HorizontalSliderPageAct openHorizontalSliderPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/horizontal_slider");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/horizontal_slider");
         return this;
     }
 
@@ -31,7 +26,7 @@ public class HorizontalSliderPageAct extends PageObject {
         /***
          * Just doing the .click() will click in the middle of a slider, so I'm using the Actions()
          */
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(driverThread.get());
         actions.moveToElement(horizontalSliderPageWebElements.slider());
         actions.build().perform();
         return this;

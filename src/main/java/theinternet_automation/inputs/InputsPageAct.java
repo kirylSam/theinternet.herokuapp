@@ -8,8 +8,8 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class InputsPageAct extends PageObject {
 
-    InputsPageVerify inputsPageVerify = new InputsPageVerify(driver);
-    InputsPageWebElements inputsPageWebElements = new InputsPageWebElements(driver);
+    InputsPageVerify inputsPageVerify = new InputsPageVerify(driverThread.get());
+    InputsPageWebElements inputsPageWebElements = new InputsPageWebElements(driverThread.get());
 
     //Constructor
     public InputsPageAct(WebDriver driver) {
@@ -17,7 +17,7 @@ public class InputsPageAct extends PageObject {
     }
 
     public InputsPageAct openInputsPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/inputs");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/inputs");
         return this;
     }
 

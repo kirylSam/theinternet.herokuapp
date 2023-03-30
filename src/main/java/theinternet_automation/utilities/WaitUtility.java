@@ -16,7 +16,7 @@ public class WaitUtility extends PageObject {
         super(driver);
     }
     public static final Duration duration = Duration.ofSeconds(60);
-    public static final WebDriverWait wait = new WebDriverWait(driver, duration);
+    public static final WebDriverWait wait = new WebDriverWait(driverThread.get(), duration);
 
     public static WebElement WaitForVisibilityOf(WebElement element) {
         return wait.until(visibilityOf(element));
@@ -28,11 +28,11 @@ public class WaitUtility extends PageObject {
     }
 
     public static void WaitForASecondWindowToBeOpened() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebDriverWait wait = new WebDriverWait(driverThread.get(), Duration.ofSeconds(15));
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
     }
 
-    public static void WaitForTitleToBe(String expectedTitle) {
+   /* public static void WaitForTitleToBe(String expectedTitle) {
         wait.until(titleIs(expectedTitle));
-    }
+    }*/
 }

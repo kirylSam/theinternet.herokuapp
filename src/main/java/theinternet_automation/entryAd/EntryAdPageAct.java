@@ -9,13 +9,13 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class EntryAdPageAct extends PageObject {
 
-    EntryAdPageWebElements entryAdPageWebElements = new EntryAdPageWebElements(driver);
-    EntryAdPageVerify entryAdPageVerify = new EntryAdPageVerify(driver);
+    EntryAdPageWebElements entryAdPageWebElements = new EntryAdPageWebElements(driverThread.get());
+    EntryAdPageVerify entryAdPageVerify = new EntryAdPageVerify(driverThread.get());
 
     public EntryAdPageAct(WebDriver driver) { super(driver);}
 
     public EntryAdPageAct openEntryAdPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/entry_ad");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/entry_ad");
         return this;
     }
 

@@ -13,10 +13,10 @@ public class ContextMenuPageVerify extends PageObject {
     public ContextMenuPageVerify(WebDriver driver) { super(driver);}
 
     boolean isJSAlertTriggered() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebDriverWait wait = new WebDriverWait(driverThread.get(), Duration.ofSeconds(2));
         try {
             wait.until(ExpectedConditions.alertIsPresent());
-            String alertText = driver.switchTo().alert().getText();
+            String alertText = driverThread.get().switchTo().alert().getText();
             if (alertText.equals("You selected a context menu")) {
                 return true;
             } else {

@@ -8,13 +8,13 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class DropdownPageAct extends PageObject {
 
-    DropdownPageWebElements dropdownPageWebElements = new DropdownPageWebElements(driver);
-    DropdownPageVerify dropdownPageVerify = new DropdownPageVerify(driver);
+    DropdownPageWebElements dropdownPageWebElements = new DropdownPageWebElements(driverThread.get());
+    DropdownPageVerify dropdownPageVerify = new DropdownPageVerify(driverThread.get());
 
     public DropdownPageAct(WebDriver driver) { super(driver);}
 
     public DropdownPageAct openDropdownPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/dropdown");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/dropdown");
         return this;
     }
 

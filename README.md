@@ -1,6 +1,6 @@
 # theinternet.herokuapp
 ##### Automated Acceptance Tests written with Java and Selenium for http://the-internet.herokuapp.com
-Running in both Chrome and Firefox.
+Running headless in both Chrome and Firefox.
 
 ---
 ## Tested Examples:
@@ -18,4 +18,5 @@ Running in both Chrome and Firefox.
 - [Hovers](https://the-internet.herokuapp.com/hovers)
 - [Inputs](https://the-internet.herokuapp.com/inputs) 
 - [JQuery UI](https://the-internet.herokuapp.com/jqueryui/menu)
-- [MultipleWindows](https://the-internet.herokuapp.com/windows)
+- [JS Alerts](https://the-internet.herokuapp.com/javascript_alerts)
+

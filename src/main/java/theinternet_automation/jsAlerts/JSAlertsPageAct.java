@@ -9,12 +9,9 @@ import theinternet_automation.utilities.WaitUtility;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class JSAlertsPageAct extends PageObject {
-    /***
-     * This whole test is temporarily abandoned due to some issues with Chrome 111. Will return to it later.
-     */
 
-    JSAlertsPageVerify jsAlertsPageVerify = new JSAlertsPageVerify(driver);
-    JSAlertsPageWebElements jsAlertsPageWebElements = new JSAlertsPageWebElements(driver);
+    JSAlertsPageVerify jsAlertsPageVerify = new JSAlertsPageVerify(driverThread.get());
+    JSAlertsPageWebElements jsAlertsPageWebElements = new JSAlertsPageWebElements(driverThread.get());
 
     //Constructor
     public JSAlertsPageAct(WebDriver driver) {
@@ -22,7 +19,7 @@ public class JSAlertsPageAct extends PageObject {
     }
 
     public JSAlertsPageAct openJSAlertsPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
         return this;
     }
 

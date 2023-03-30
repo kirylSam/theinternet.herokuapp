@@ -5,7 +5,7 @@ import theinternet_automation.PageObject;
 
 public class JSAlertsPageVerify extends PageObject {
 
-    JSAlertsPageWebElements jsAlertsPageWebElements = new JSAlertsPageWebElements(driver);
+    JSAlertsPageWebElements jsAlertsPageWebElements = new JSAlertsPageWebElements(driverThread.get());
 
     public JSAlertsPageVerify(WebDriver driver) { super(driver);}
 

@@ -1,10 +1,7 @@
 package theinternet_automation.exitAd;
 
-import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import theinternet_automation.PageObject;
-import theinternet_automation.entryAd.EntryAdPageVerify;
-import theinternet_automation.entryAd.EntryAdPageWebElements;
 import theinternet_automation.utilities.WaitUtility;
 
 import java.awt.*;
@@ -14,13 +11,13 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class ExitAdPageAct extends PageObject {
 
-    ExitAdPageWebElements exitAdPageWebElements = new ExitAdPageWebElements(driver);
-    ExitAdPageVerify exitAdPageVerify = new ExitAdPageVerify(driver);
+    ExitAdPageWebElements exitAdPageWebElements = new ExitAdPageWebElements(driverThread.get());
+    ExitAdPageVerify exitAdPageVerify = new ExitAdPageVerify(driverThread.get());
 
     public ExitAdPageAct(WebDriver driver) { super(driver);}
 
     public ExitAdPageAct openExitAdPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/entry_ad");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/entry_ad");
         return this;
     }
 

@@ -6,7 +6,7 @@ import theinternet_automation.PageObject;
 public class BasicAuthPageVerify extends PageObject {
     public BasicAuthPageVerify(WebDriver driver) { super(driver);}
 
-    BasicAuthPageWebElements basicAuthPageWebElements = new BasicAuthPageWebElements(driver);
+    BasicAuthPageWebElements basicAuthPageWebElements = new BasicAuthPageWebElements(driverThread.get());
 
     boolean areWeLoggedIn() {
         //return(driver.getPageSource().contains("Congratulations! You must have the proper credentials."));

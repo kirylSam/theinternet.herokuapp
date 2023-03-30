@@ -8,8 +8,9 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class BasicAuthPageAct extends PageObject {
 
-    BasicAuthPageVerify basicAuthPageVerify = new BasicAuthPageVerify(driver);
-    BasicAuthPageWebElements basicAuthPageWebElements = new BasicAuthPageWebElements(driver);
+    BasicAuthPageVerify basicAuthPageVerify = new BasicAuthPageVerify(driverThread.get());
+    BasicAuthPageWebElements basicAuthPageWebElements = new BasicAuthPageWebElements(driverThread.get());
+
 
     //Constructor
     public BasicAuthPageAct(WebDriver driver) {
@@ -17,11 +18,11 @@ public class BasicAuthPageAct extends PageObject {
     }
 
     public BasicAuthPageAct passLoginAndPasswordInURLandOpenBasicAuth() {
-        driver.navigate().to("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+        driverThread.get().navigate().to("https://admin:admin@the-internet.herokuapp.com/basic_auth");
         return this;
     }
 
-    public BasicAuthPageAct checkIfBasicAuthIsSuccessfull() {
+    public BasicAuthPageAct checkIfBasicAuthIsSuccessful() {
         WaitUtility.WaitForVisibilityOf(basicAuthPageWebElements.congratulationsLabel());
         assertTrue(basicAuthPageVerify.areWeLoggedIn());
         return this;

@@ -1,6 +1,5 @@
 package theinternet_automation.jQueryMenu;
 
-import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import theinternet_automation.PageObject;
@@ -10,8 +9,8 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class JQueryMenuPageAct extends PageObject {
 
-    JQueryMenuPageVerify jQueryMenuPageVerify = new JQueryMenuPageVerify(driver);
-    JQueryMenuPageWebElements jQueryMenuPageWebElements = new JQueryMenuPageWebElements(driver);
+    JQueryMenuPageVerify jQueryMenuPageVerify = new JQueryMenuPageVerify(driverThread.get());
+    JQueryMenuPageWebElements jQueryMenuPageWebElements = new JQueryMenuPageWebElements(driverThread.get());
 
     //Constructor
     public JQueryMenuPageAct(WebDriver driver) {
@@ -19,12 +18,12 @@ public class JQueryMenuPageAct extends PageObject {
     }
 
     public JQueryMenuPageAct openJQueryMenuPage() {
-        driver.navigate().to("https://the-internet.herokuapp.com/jqueryui/menu");
+        driverThread.get().navigate().to("https://the-internet.herokuapp.com/jqueryui/menu");
         return this;
     }
 
     public JQueryMenuPageAct hoverOverEnabledButton() {
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(driverThread.get());
         actions.moveToElement(jQueryMenuPageWebElements.enabledButton());
         actions.perform();
         return this;
@@ -32,7 +31,7 @@ public class JQueryMenuPageAct extends PageObject {
 
     public JQueryMenuPageAct hoverOverBackToJQueryButton() {
         WaitUtility.WaitForVisibilityOf(jQueryMenuPageWebElements.backToJQueryUIButton());
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(driverThread.get());
         actions.moveToElement(jQueryMenuPageWebElements.backToJQueryUIButton());
         actions.perform();
         return this;
