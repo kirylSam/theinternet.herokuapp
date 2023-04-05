@@ -19,4 +19,5 @@ Running headless in both Chrome and Firefox.
 - [Inputs](https://the-internet.herokuapp.com/inputs) 
 - [JQuery UI](https://the-internet.herokuapp.com/jqueryui/menu)
 - [JS Alerts](https://the-internet.herokuapp.com/javascript_alerts)
+- [Notification Messages](https://the-internet.herokuapp.com/notification_message)
 
