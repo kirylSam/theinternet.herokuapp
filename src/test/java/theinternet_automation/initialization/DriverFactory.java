@@ -28,17 +28,18 @@ public final class DriverFactory {
     }
 
     private static WebDriver createBrowserInstance(String browser) {
-        switch (browser.toLowerCase()) {
-            case "chrome":
+        return switch (browser.toLowerCase()) {
+            case "chrome" -> {
                 ChromeOptions optionsChrome = new ChromeOptions();
                 optionsChrome.addArguments("--headless=new");
-            return new ChromeDriver(optionsChrome);
-            case "firefox":
+                yield new ChromeDriver(optionsChrome);
+            }
+            case "firefox" -> {
                 FirefoxOptions optionsFirefox = new FirefoxOptions();
                 optionsFirefox.addArguments("-headless");
-            return new FirefoxDriver(optionsFirefox);
-            default:
-                throw new IllegalArgumentException("Browser [" + browser + "] is NOT supported");
-        }
+                yield new FirefoxDriver(optionsFirefox);
+            }
+            default -> throw new IllegalArgumentException("Browser [" + browser + "] is NOT supported");
+        };
     }
 }
